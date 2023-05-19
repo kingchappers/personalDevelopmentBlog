@@ -11,7 +11,7 @@ import {
 const Layout = ({ pageTitle, children }) => {
     return (
         <div className={container}>
-            <h1>Sam Chapman | Personal Development Blog</h1>
+            <h1 className="text-3xl font-bold">Sam Chapman .Dev | Personal Development Blog</h1>
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
