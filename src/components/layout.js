@@ -26,6 +26,13 @@ const Layout = ({ pageTitle, children }) => {
                                 Home
                             </Link>
                         </li>
+
+                        <li className="mr-6">
+                            <Link className="rounded py-2 px-4 bg-slate-600 hover:bg-slate-700 text-white" to="/blog">
+                                Blog
+                            </Link>
+                        </li>
+
                         <li className="mr-6">
                             <Link className="rounded py-2 px-4 bg-slate-600 hover:bg-slate-700 text-white" to="/about">
                                 About
