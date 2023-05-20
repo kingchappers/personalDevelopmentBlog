@@ -4,11 +4,11 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 const Layout = ({ pageTitle, children }) => {
 
     const data = useStaticQuery(graphql`
-        query MyQuery {
+        query TitleQuery {
             site {
-            siteMetadata {
-                title
-            }
+                siteMetadata {
+                    title
+                }
             }
         }
     `)
@@ -34,7 +34,7 @@ const Layout = ({ pageTitle, children }) => {
                     </ul>
                 </nav>
             </header>
-            
+
             <main>
                 <h1 className="text-2xl font-bold pb-3">{pageTitle}</h1>
                 {children}
