@@ -6,10 +6,10 @@ slug: "add-partition"
 
 This will show you how to add a partition on a separate drive. The tutorial looks at a Windows drive but it can be changed for any OS.
 <br/><br/>
-####Find Windows Drive
+### Find Windows Drive
 First step is finding out which drive has the partition you want on it.
 
-```bash{numerLines: true}
+```bash{numberLines: true}
 fdisk -l
 ```
 
@@ -17,16 +17,16 @@ This may give you a long output. Essentially what you'll see is a list of disks 
 
 You'll have to work out which partition you need to mount. For a Windows system it will be the one of type EFI System; for me this was **sdb2**.
 <br/><br/>
-####Mounting the Partition
+### Mounting the Partition
 Now mount the correct partition using the following commands:
 
-```bash{numerLines: true}
+```bash{numberLines: true}
 mkdir /mnt/windows
 mount /dev/sdb2 /mnt/windows
 ```
 This has created a folder called windows in the */mnt* directory and mounted the *sdb2* partition to it.
 <br/><br/>
-####Adding the Partition to GRUB
+### Adding the Partition to GRUB
 You can now add the partition to GRUB using the following commands:
 
 ```bash
@@ -34,3 +34,12 @@ os-prober
 grub-mkconfig -o /boot/grub/brb.cfg
 ```
 These commands probe the systems disks for other operating systems and adds them to the bootloader. Then you create a new GRUB config file and overwrites the existing one.
+
+```javascript
+//testing
+function foo(bar) {
+  var a = 42,
+    b = 'Prism';
+  return a + bar(b);
+}
+```
