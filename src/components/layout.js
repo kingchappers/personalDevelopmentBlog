@@ -42,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
                 </nav>
             </header>
 
-            <main>
+            <main className="pb-10">
                 <h1 className="text-4xl font-bold pb-3">{pageTitle}</h1>
                 {children}
             </main>
