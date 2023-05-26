@@ -14,7 +14,7 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
     return (
-        <div className="grid place-content-center">
+        <div className="grid place-content-center mx-10">
             <header>
                 <h1 className="text-5xl font-bold mt-5">
                     Sam Chapman .Dev | {data.site.siteMetadata.title}
@@ -42,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
                 </nav>
             </header>
 
-            <main>
+            <main className="max-w-screen-xl col-span-full">
                 <h1 className="text-4xl font-bold pb-3">{pageTitle}</h1>
                 {children}
             </main>
