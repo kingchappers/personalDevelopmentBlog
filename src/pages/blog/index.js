@@ -9,7 +9,9 @@ const BlogPage = ({ data }) => {
       <ul>
         {
           data.allMdx.nodes.map(node => (
-            <article key ={node.id} className="grid-cols-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div className="grid-cols-2 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+              <div>
+            <article key={node.id}>
               <h2 className='text-xl font-bold'>
                 <Link to={`/blog/${node.frontmatter.slug}`}>
                   {node.frontmatter.title}
@@ -18,6 +20,8 @@ const BlogPage = ({ data }) => {
               <p>Excerpt: {node.excerpt}</p>
               <p className='text-sm pb-3'>Posted: {node.frontmatter.date}</p>
             </article>
+            </div>
+            </div>
           ))
         }
       </ul>
