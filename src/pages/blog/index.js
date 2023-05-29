@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
       <ul>
         {
           data.allMdx.nodes.map(node => (
-            <article key ={node.id}>
+            <article key ={node.id} className="grid-cols-4 max-w-sm rounded overflow-hidden shadow-lg">
               <h2 className='text-xl font-bold'>
                 <Link to={`/blog/${node.frontmatter.slug}`}>
                   {node.frontmatter.title}
