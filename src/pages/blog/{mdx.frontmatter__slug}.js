@@ -2,12 +2,13 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import "../../styles/global.scss"
 
 const BlogPost = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.data}</p>
-      <article className="prose max-w-screen-lg pb-3">
+      <article className="content">
         {children}
       </article>
     </Layout>

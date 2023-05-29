@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import "../styles/global.scss"
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -14,36 +15,33 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
     return (
-        <div className="grid place-content-center mx-10">
-            <header>
-                <h1 className="max-w-screen-xl text-5xl font-bold mt-5">
+        <div>
+            <header className="block">
+                <h1 className="title is-1">
                     Sam Chapman .Dev | {data.site.siteMetadata.title}
                 </h1>
-                <nav className="flex items-center justify-between flex-wrap bg-slate-800 rounded px-5 py-5 mt-4 mb-4">
-                    <ul className="flex">
-                        <li className="mr-6">
-                            <Link className="rounded py-2 px-4 bg-slate-600 hover:bg-slate-700 text-white" to="/">
+                <div className="navbar has-background-primary">
+                    <div className="navebar-brand">
+                        <Link className="navbar-item" to="/">Sam Chapman .Dev</Link>
+                    </div>
+                    <div className="navbar-start">
+                            <Link className="navbar-item" to="/">
                                 Home
                             </Link>
-                        </li>
 
-                        <li className="mr-6">
-                            <Link className="rounded py-2 px-4 bg-slate-600 hover:bg-slate-700 text-white" to="/blog">
+                            <Link className="navbar-item" to="/blog">
                                 Blog
                             </Link>
-                        </li>
 
-                        <li className="mr-6">
-                            <Link className="rounded py-2 px-4 bg-slate-600 hover:bg-slate-700 text-white" to="/about">
+                            <Link className="navbar-item" to="/about">
                                 About
                             </Link>
-                        </li>
-                    </ul>
-                </nav>
+                </div>
+                </div>
             </header>
 
-            <main className="col-span-full">
-                <h1 className="text-4xl font-bold pb-3">{pageTitle}</h1>
+            <main>
+                <h1 className="title">{pageTitle}</h1>
                 {children}
             </main>
         </div>

@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: `https://www.samchapman.dev`,
   },
   plugins: [
+    "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
