@@ -6,12 +6,15 @@ import "../../styles/global.scss"
 
 const BlogPost = ({ data, children }) => {
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.data}</p>
-      <article className="content">
-        {children}
-      </article>
-    </Layout>
+
+    <div className="content">
+      <Layout pageTitle={data.mdx.frontmatter.title}>
+        <p>{data.mdx.frontmatter.data}</p>
+        <article>
+          {children}
+        </article>
+      </Layout>
+    </div>
   )
 }
 

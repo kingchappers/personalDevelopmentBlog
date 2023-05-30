@@ -12,15 +12,15 @@ const BlogPage = ({ data }) => {
           data.allMdx.nodes.map(node => (
             <div className="column is-one-quarter">
                 <div className="card card-content has-background-primary has-text-white-ter">
+                <Link to={`/blog/${node.frontmatter.slug}`}>
                   <article key={node.id}>
-                    <h2 className="card-header-title">
-                      <Link to={`/blog/${node.frontmatter.slug}`}>
-                        {node.frontmatter.title}
-                      </Link>
+                    <h2 className="card-header-title has-text-white-ter">
+                      {node.frontmatter.title}
                     </h2>
                     <p className="content">Excerpt: {node.excerpt}</p>
                     <p className="is-size-7">Posted: {node.frontmatter.date}</p>
                   </article>
+                  </Link>
             </div>
         </div>
           ))

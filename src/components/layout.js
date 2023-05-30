@@ -15,13 +15,13 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
     return (
-        <div className="has-background-light">
-            <div className="container"> 
-                <header>
+        <div className="has-background-dark">
+            <div className="container has-background-primary has-text-white-ter"> 
+                <header className="title is-1 has-background-dark">
                     <h1 className="title is-1 has-text-white-ter">
                         Sam Chapman .Dev | {data.site.siteMetadata.title}
                     </h1>
-                    <div className="navbar has-background-primary">
+                    <div className="navbar has-background-dark">
                         <div className="navbar-brand">
                             <Link className="navbar-item is-size-3 has-text-white-ter has-text-weight-bold mx-3" to="/">Sam Chapman .Dev</Link>
                         </div>
@@ -39,7 +39,7 @@ const Layout = ({ pageTitle, children }) => {
                     </div>
                 </header>
 
-                <main className="">
+                <main>
                     <h1 className="title mt-3 has-text-white-ter">{pageTitle}</h1>
                     <div className="has-text-white-ter">
                         {children}
