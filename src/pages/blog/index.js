@@ -11,7 +11,7 @@ const BlogPage = ({ data }) => {
         {
           data.allMdx.nodes.map(node => (
             <div className="column is-one-quarter">
-                <div className="card card-content">
+                <div className="card card-content has-background-primary has-text-white-ter">
                   <article key={node.id}>
                     <h2 className="card-header-title">
                       <Link to={`/blog/${node.frontmatter.slug}`}>
