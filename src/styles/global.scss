@@ -7,7 +7,11 @@
 @import "~bulma/sass/utilities/functions";
 
 // Set the derived variables
-$primary: #0011ff;
+$primary: #36383F;
+
+.navbar-item:hover{
+    background-color:#4B4E58 !important;
+}
 
 // Import the rest of Bulma
 @import "~bulma/bulma.sass";
