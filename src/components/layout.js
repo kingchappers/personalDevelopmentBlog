@@ -41,7 +41,9 @@ const Layout = ({ pageTitle, children }) => {
 
                 <main className="">
                     <h1 className="title mt-3 has-text-white-ter">{pageTitle}</h1>
-                    {children}
+                    <div className="has-text-white-ter">
+                        {children}
+                    </div>
                 </main>
             </div>
         </div>
