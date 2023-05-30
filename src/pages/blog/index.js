@@ -7,6 +7,25 @@ import "../../styles/global.scss"
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Blog Posts">
+        {
+          data.allMdx.nodes.map(node => (
+            <div className="card mb-4">
+              <div className="card-content">
+            <article key={node.id}>
+              <h2 className="card-header-title">
+                <Link to={`/blog/${node.frontmatter.slug}`}>
+                  {node.frontmatter.title}
+                </Link>
+              </h2>
+              <p className="content">Excerpt: {node.excerpt}</p>
+              <p className="is-size-7">Posted: {node.frontmatter.date}</p>
+            </article>
+            </div>
+            </div>
+          ))
+        }
+
+
       <ul>
         {
           data.allMdx.nodes.map(node => (
