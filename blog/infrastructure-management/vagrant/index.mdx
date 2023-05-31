@@ -23,7 +23,7 @@ This page will teach the basics of Vagrant, and hopefully show ways it may be us
 
  To download the box:
 
- ```
+ ```bash
  vagrant box add hashicorp/bionic64
  ```
  * You'll be asked to choose the provider you would like to use. The provider in this case is the VM environment. 
@@ -47,13 +47,13 @@ config.vm.box_url = "https://vagrantcloud.com/hashicorp/bionic64"
 
 To start the box:
 
-```
+```bash
 vagrant up
 ```
 
 It's as simple as that! There is now a virtual machine running, using the box you provided it. If you'd like to ssh into the box:
 
-```
+```bash
 vagrant ssh
 ```
 
@@ -71,7 +71,7 @@ Files can be synchronised between the host and the VM. By default anything store
 #### Scripts
 You can run scripts when a VM starts. To do that you need to add something like the following to your Vagrantfile:
 
-```
+```bash
 config.vm.provision :shell, path: "bootstrap.sh"
 ```
 * *:shell* - Tells Vagrant to use the shell provisioner.
@@ -170,19 +170,19 @@ chown -R vagrant /home/vagrant/.ssh
 ```
 
 Now install OpenSSH, guest tools and the VBoxAdditions. to install the guest tools install the following:
-```
+```bash
 apt install gcc dkms build-essential linux-headers-generic
 ```
 Now exit the VM and do the below, this can be done from anywhere in the host:
 
-```
+```bash
 mkdir ./mybox
 cd ./mybox
 vagrant package --base <myVMName>
 ```
 To add and run the box:
 
-```
+```bash
 vagrant box add <myVMName>
 vagrant init <myVMName>
 vagrant up
@@ -191,7 +191,7 @@ vagrant up
 To make a box from a box that already exists:
 
 Get the box and make your changes. Do the following command:
-```
+```bash
 vagrant package --output <mybox>.box
 ```
 

@@ -6,11 +6,13 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
+
 // Set the derived variables
 $primary: #1F1B24;
 $dark: #121212;
 
 $text-strong: inherit;
+$link: inherit;
 
 .navbar-item:hover{
     background-color:#36383F !important;

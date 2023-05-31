@@ -4,6 +4,10 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import "../../styles/global.scss"
 
+import Prism from "prismjs";
+import "prismjs/plugins/custom-class/prism-custom-class";
+Prism.plugins.customClass.map({ number: "prism-number", tag: "prism-tag" });
+
 const BlogPost = ({ data, children }) => {
   return (
 
