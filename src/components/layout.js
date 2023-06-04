@@ -32,9 +32,6 @@ const Layout = ({ pageTitle, children }) => {
                             <Link className="navbar-item is-size-4 has-text-white-ter" to="/blog">
                                 Blog
                             </Link>
-                            <Link className="navbar-item is-size-4 has-text-white-ter" to="/about">
-                                About
-                            </Link>
                         </div>
                     </div>
                 </header>

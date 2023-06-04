@@ -7,7 +7,7 @@ import "../../styles/global.scss"
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Blog Posts">
-      <h2 className="subtitle has-text-white-ter">General Tools</h2>
+      <h2 className="subtitle has-text-weight-semibold has-text-white-ter">General Tools</h2>
       <div className="columns is-multiline">  
         {
           data.generalTools.nodes.map(node => (
@@ -18,7 +18,7 @@ const BlogPage = ({ data }) => {
                     <h2 className="card-header-title has-text-white-ter">
                       {node.frontmatter.title}
                     </h2>
-                    <p className="content">Excerpt: {node.excerpt}</p>
+                    <p className="content">{node.excerpt}</p>
                     <p className="is-size-7">Posted: {node.frontmatter.date}</p>
                   </article>
                   </Link>
@@ -28,7 +28,7 @@ const BlogPage = ({ data }) => {
         }
         </div>
 
-        <h2 className="subtitle has-text-white-ter">Infrastructure Management</h2>
+        <h2 className="subtitle has-text-weight-semibold has-text-white-ter">Infrastructure Management</h2>
         <div className="columns is-multiline">  
         {
           data.infrastructureManagement.nodes.map(node => (
@@ -49,7 +49,7 @@ const BlogPage = ({ data }) => {
         }
         </div>
 
-        <h2 className="subtitle has-text-white-ter">Linux Configuration</h2>
+        <h2 className="subtitle has-text-weight-semibold has-text-white-ter">Linux Configuration</h2>
         <div className="columns is-multiline">  
         {
           data.linuxConfiguration.nodes.map(node => (
@@ -70,7 +70,7 @@ const BlogPage = ({ data }) => {
         }
         </div>
 
-        <h2 className="subtitle has-text-white-ter">Linux Tools</h2>
+        <h2 className="subtitle has-text-weight-semibold has-text-white-ter">Linux Tools</h2>
         <div className="columns is-multiline">  
         {
           data.linuxTools.nodes.map(node => (
@@ -91,7 +91,7 @@ const BlogPage = ({ data }) => {
         }
         </div>
 
-        <h2 className="subtitle has-text-white-ter">Security Tools</h2>
+        <h2 className="subtitle has-text-weight-semibold has-text-white-ter">Security Tools</h2>
         <div className="columns is-multiline">  
         {
           data.securityTools.nodes.map(node => (
@@ -112,7 +112,7 @@ const BlogPage = ({ data }) => {
         }
         </div>
 
-        <h2 className="subtitle has-text-white-ter">Windows Tools</h2>
+        <h2 className="subtitle has-text-weight-semibold has-text-white-ter">Windows Tools</h2>
         <div className="columns is-multiline">  
         {
           data.windowsTools.nodes.map(node => (
@@ -149,7 +149,7 @@ query GetBlogPosts {
         slug
         category
       }
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 150)
     }
   }
   infrastructureManagement: allMdx(
@@ -163,7 +163,7 @@ query GetBlogPosts {
         slug
         category
       }
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 150)
     }
   }
   linuxConfiguration: allMdx(
@@ -177,7 +177,7 @@ query GetBlogPosts {
         slug
         category
       }
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 150)
     }
   }
 	linuxTools: allMdx(
@@ -191,7 +191,7 @@ query GetBlogPosts {
         slug
         category
       }
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 150)
     }
   }
   securityTools: allMdx(
@@ -205,7 +205,7 @@ query GetBlogPosts {
         slug
         category
       }
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 150)
     }
   }
   windowsTools: allMdx(
@@ -219,7 +219,7 @@ query GetBlogPosts {
         slug
         category
       }
-      excerpt(pruneLength: 100)
+      excerpt(pruneLength: 150)
     }
   }
 }
