@@ -10,7 +10,7 @@ To run the site simply run the following commands:
   
   ```shell
   cd my-gatsby-site/
-  npm run develop
+  gatsby develop
   ```
 
 The site runs on a static web app in Azure and is deployed directly from GitHub.
