@@ -19,6 +19,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        "icon": "src/images/sc-logo-cropped.png"
+      }
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
